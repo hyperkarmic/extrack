@@ -25,6 +25,16 @@ connection.once("open", () => {
 
 //mongoose functionality ends here!!!!!
 
+const exercisesRouter = require("./routes/exercises");
+const usersRouter = require("./routes/users");
+
+//routers are added from other files
+
+app.use("/exercises", exercisesRouter);
+app.use("/users", usersRouter);
+
+//these routers are then added as middleware!!!!!
+
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
