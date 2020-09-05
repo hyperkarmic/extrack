@@ -16,7 +16,7 @@
   },
   "scripts": {
     "test": "react-scripts test",
-    "eject": "react-scripts eject",git
+    "eject": "react-scripts eject",
     "start": "forever -m 5 bin/www",
     "heroku-postbuild": "cd client && yarn --production=false && yarn run build",
     "dev": "concurrently \"forever -m 5 -w bin/www\" \"cd client && yarn start\""
